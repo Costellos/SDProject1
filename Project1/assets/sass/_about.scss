@@ -1,0 +1,78 @@
+.about{
+    &_item{
+        @include breakpoint($laptops){
+            display: flex;
+            justify-content: space-between;
+        }
+        .text_box{
+            margin:0px 1.2rem 2rem 1.2rem;
+            @include breakpoint($laptops){
+                width: 50%;
+                margin:0px 0px 0px 0px;
+            }
+            &.left{
+                @include breakpoint($laptops){
+                    margin:0px 2.5% 0px 0px;
+                    text-align: right;
+                }
+            }
+            &.right{
+                @include breakpoint($laptops){
+                    margin:0px 0px 0px 2.5%;
+                    text-align: left;
+                }
+            }
+            h3{
+                font-family: $regular-font;
+                font-weight: $light-weight;
+                text-transform: uppercase;
+            }
+            p{
+                font-family: $regular-font;
+                font-weight: $regular-weight;
+                font-size: .9rem;
+                line-height: 1.4rem;
+                @include breakpoint($laptops){
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                }
+            }
+            .btn{
+                font-family: $regular-font;
+                font-weight: $regular-weight;
+                text-transform: uppercase;
+                @include margin($top: 2rem);
+            }
+        }
+        .img_box{
+            margin:0px 1.2rem 2rem 1.2rem;
+            @include breakpoint($laptops){
+                width: 50%;
+                margin:0px 0px 0px 0px;
+            }
+            &.left{
+                @include breakpoint($laptops){
+                    margin:0px 2.5% 0px 0px;
+                }
+            }
+            &.right{
+                @include breakpoint($laptops){
+                    margin:0px 0px 0px 2.5%;
+                }
+            }
+            figure{
+                position: relative;
+                figcaption{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    font-size: 1rem;
+                    font-family: $bold-font;
+                    font-weight: $semibold-weight;
+                    color: $white;
+                    text-shadow: 1px 1px $black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.hero_header{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imgs/hero_1.jpg');
+    background-position: 0 35%;
+    background-size: cover;
+    position: relative;
+    header{
+        padding:20px 0px;
+        .logo{
+            width: 100%;
+            @include breakpoint($laptops){
+                width: 250px;
+            }
+            a{
+                display: block;
+                max-width: 100%;
+                @include breakpoint($laptops){
+                    max-width: 250px;
+                }
+                height: 40px;
+                background-color: $white;
+                mask: url('../imgs/logo.svg') no-repeat center / contain;
+                -webkit-mask: url('../imgs/logo.svg') no-repeat center / contain;
+            }
+        }
+    }
+
+    .hero_content{
+        color: $white;
+        text-align: center;
+        @include breakpoint($laptops){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @include breakpoint($desktop){
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero_title{
+            font-family: $bold-font;
+            font-weight: $extrabold-weight;
+            text-transform: uppercase;
+            font-size: 2rem;
+            line-height: 3rem;
+            @include breakpoint($desktop){
+                font-size: 2.2rem;
+                line-height: 3.4rem;
+            }
+            @include breakpoint($desktop){
+                font-size: 2.5rem;
+                line-height: 4rem;
+            }
+        }
+        .hero_text{
+            font-family: $regular-font;
+            font-weight: $regular-weight;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+        .hero_btn{
+            margin-top: 1.2rem;
+            font-family: $regular-font;
+            font-weight: $regular-weight;
+        }
+    }
+}
