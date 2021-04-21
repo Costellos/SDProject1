@@ -1,0 +1,28 @@
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding:15px 20px;
+    &.primary{
+        background: $white;
+        color: $black;
+        transition: all ease 500ms;
+        &:hover{
+            background: $black;
+            color: $white;
+        }
+    }
+    &.outline{
+        border:2px solid $black;
+        transition: all ease 500ms;
+        padding:15px 50px;
+        color: $black;
+        &.red{
+            border:2px solid $darkRed;
+            color: $darkRed;
+        }
+        &.green{
+            border:2px solid $darkGreen;
+            color: $darkGreen;
+        }
+    }
+}

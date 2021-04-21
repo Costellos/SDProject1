@@ -1,0 +1,123 @@
+footer{
+    .footer_cols{
+        @include breakpoint($laptops){
+            @include padding($top:$xlg, $bottom:$xlg);
+        }
+        
+        @include breakpoint($laptops){
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer_col{
+            @include margin($top:$md, $right:$sm,$bottom:$md,$left:$sm);
+            text-align: center;
+            @include breakpoint($laptops){
+                text-align: left;
+                width: 31%;
+                &:first-child{
+                    width: 234px;
+                }
+            }
+        }
+        .footer_logo{
+            text-align: center;
+            width: 100%;
+            @include breakpoint($laptops){
+                width: 234px;
+            }
+            @include margin($bottom:2rem);
+            a{
+                margin:0px auto;
+                display: block;
+                max-width: 234px;
+                height: 40px;
+                background-color: $gray;
+                mask: url('../imgs/logo.svg') no-repeat center / contain;
+                -webkit-mask: url('../imgs/logo.svg') no-repeat center / contain;
+            }
+        }
+        .footer_text{
+            font-family: $regular-font;
+            font-weight: $regular-weight;
+            font-size:1rem;
+            line-height: 1.5rem;
+            color: $gray;
+            &.small{
+                font-size: .9rem;
+                line-height: 1.4rem;
+            }
+            a{
+                color: $gray;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .footer_items{
+            ul{
+                li{
+                    font-family: $regular-font;
+                    font-weight: $regular-weight;
+                    color: $gray;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    margin:0px 0px 1rem 0px;
+                }
+            }
+        }
+    }
+    .footer_util{
+        @include margin($top:$md,$right:$sm,$bottom:$sm,$left:$sm);
+        @include breakpoint($laptops){
+            @include margin($top:$md,$right:auto,$bottom:$sm,$left:auto);
+            display: flex;
+            justify-content: space-between;
+        }
+        .copyright{
+            font-family: $regular-font;
+            font-weight: $regular-weight;
+            color: $black;
+            font-size: .9rem;
+            line-height: 1.4rem;
+            a{
+                color: $black;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .footer_menu{
+            @include margin($top:$sm,$bottom:$sm);
+            @include breakpoint($laptops){
+                @include margin($top:0px,$bottom:0px);
+            }
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+                @include breakpoint($laptops){
+                    display: block;
+                }
+                font-family: $regular-font;
+                font-weight: $regular-weight;
+                font-size: .9rem;
+                line-height: 1.4rem;
+                li{
+                    @include breakpoint($laptops){
+                        display: inline-block;
+                        margin:0px 1rem;
+                    }
+                    text-transform: uppercase;
+                    a{
+                        color: $black;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="467" height="80" viewBox="0 0 467 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+      }
+
+      .cls-2 {
+        font-size: 50px;
+        fill: #fff8f8;
+        font-family: "Myriad Pro";
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="80" height="80" rx="10" ry="10"/>
+  <text id="A_LOGO_HERE" data-name="A LOGO HERE" class="cls-2" x="99.875" y="57.125">A LOGO HERE</text>
+</svg>
